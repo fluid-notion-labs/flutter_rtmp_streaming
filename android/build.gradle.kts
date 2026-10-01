@@ -1,5 +1,6 @@
 plugins {
     id("com.android.library")
+    id("org.jetbrains.kotlin.android") version "2.4.0"
 }
 
 group = "com.app.rtmp_streaming"
@@ -25,18 +26,12 @@ rootProject.allprojects {
 
 android {
     namespace = "com.app.rtmp_streaming"
-    compileSdk = 37
+    compileSdk = 36
     buildToolsVersion = "37.0.0"
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
-    }
-
-    sourceSets {
-        getByName("main") {
-            java.srcDirs("src/main/kotlin")
-        }
     }
 
     defaultConfig {
